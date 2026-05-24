@@ -1,0 +1,759 @@
+/* ================= GOOGLE FONTS ================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ================= RESET ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#efe8dc;
+    color:#111;
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img,
+video{
+    width:100%;
+    display:block;
+}
+
+button{
+    cursor:pointer;
+    border:none;
+}
+
+/* ================= SCROLLBAR ================= */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#e8dfd2;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#d25a1e;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#111;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+    width:100%;
+    height:90px;
+    background:rgba(244,238,228,0.92);
+    backdrop-filter:blur(14px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 6%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    border-bottom:1px solid rgba(0,0,0,0.08);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    letter-spacing:2px;
+    font-family:'Bebas Neue',sans-serif;
+}
+
+.menu{
+    display:flex;
+    gap:40px;
+}
+
+.menu a{
+    font-size:13px;
+    letter-spacing:3px;
+    position:relative;
+    transition:0.3s;
+    font-weight:600;
+}
+
+.menu a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:0%;
+    height:2px;
+    background:#d25a1e;
+    transition:0.3s;
+}
+
+.menu a:hover::after{
+    width:100%;
+}
+
+.menu a:hover{
+    color:#d25a1e;
+}
+
+.hire-btn{
+    padding:16px 32px;
+    background:#d25a1e;
+    color:#fff;
+    font-size:12px;
+    letter-spacing:2px;
+    border-radius:8px;
+    transition:0.35s ease;
+}
+
+.hire-btn:hover{
+    background:#111;
+    transform:translateY(-2px);
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.hero-left{
+    flex:1 1 500px;
+    background:#0b132f;
+    color:#fff;
+    padding:160px 7%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.hero-tag{
+    letter-spacing:5px;
+    font-size:10px;
+    color:#9da3b7;
+    margin-bottom:30px;
+}
+
+.hero-left h1{
+    font-size:120px;
+    line-height:100px;
+    font-family:'Bebas Neue',sans-serif;
+    letter-spacing:8px;
+}
+
+.hero-script{
+    font-size:120px;
+    color:#d25a1e;
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    margin-top:5px;
+}
+
+.hero-bottom{
+    margin-top:40px;
+    font-size:12px;
+    letter-spacing:4px;
+    color:#8f95a5;
+}
+
+.hero-right{
+    flex:1 1 500px;
+    background:#efe8dc;
+    padding:160px 7%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.top-line{
+    width:80px;
+    height:4px;
+    background:#d25a1e;
+    margin-bottom:40px;
+}
+
+.hero-right h2{
+    font-size:58px;
+    line-height:74px;
+    font-weight:300;
+    font-family:'Cormorant Garamond',serif;
+    margin-bottom:35px;
+}
+
+.hero-right p{
+    font-size:20px;
+    line-height:38px;
+    color:#555;
+    margin-bottom:50px;
+}
+
+.stats{
+    display:flex;
+    gap:50px;
+    flex-wrap:wrap;
+    margin-bottom:50px;
+}
+
+.stat-box h3{
+    font-size:60px;
+    color:#d25a1e;
+    font-family:'Bebas Neue',sans-serif;
+}
+
+.stat-box span{
+    font-size:12px;
+    letter-spacing:4px;
+    color:#666;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn-orange,
+.btn-outline{
+    padding:18px 35px;
+    font-size:12px;
+    letter-spacing:2px;
+    border-radius:8px;
+    transition:0.35s ease;
+}
+
+.btn-orange{
+    background:#d25a1e;
+    color:#fff;
+}
+
+.btn-orange:hover{
+    background:#111;
+    transform:translateY(-3px);
+}
+
+.btn-outline{
+    border:1px solid #111;
+}
+
+.btn-outline:hover{
+    background:#111;
+    color:#fff;
+    transform:translateY(-3px);
+}
+
+/* ================= STORY ================= */
+
+.story-section{
+    padding:120px 7%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    background:#f7f2e9;
+}
+
+.story-left small{
+    letter-spacing:4px;
+    color:#777;
+}
+
+.story-left h2{
+    font-size:80px;
+    line-height:82px;
+    margin:20px 0 40px;
+    font-family:'Bebas Neue',sans-serif;
+}
+
+.story-left h2 span{
+    display:block;
+    color:#d25a1e;
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+}
+
+.story-left p{
+    font-size:19px;
+    line-height:36px;
+    color:#555;
+    margin-bottom:30px;
+}
+
+.story-btn{
+    background:#111;
+    color:#fff;
+    padding:18px 40px;
+    display:inline-block;
+    letter-spacing:2px;
+    border-radius:8px;
+    transition:0.35s ease;
+}
+
+.story-btn:hover{
+    background:#d25a1e;
+    transform:translateY(-2px);
+}
+
+.story-right{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.timeline-item{
+    background:#fff;
+    padding:35px;
+    display:flex;
+    gap:30px;
+    border-left:5px solid #d25a1e;
+    border-radius:14px;
+    transition:0.4s ease;
+}
+
+.timeline-item:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 40px rgba(0,0,0,0.12);
+}
+
+.year{
+    font-size:32px;
+    font-family:'Bebas Neue',sans-serif;
+    color:#d25a1e;
+    min-width:80px;
+}
+
+.timeline-content h3{
+    margin:12px 0;
+    font-size:28px;
+    font-family:'Cormorant Garamond',serif;
+}
+
+.timeline-content p{
+    color:#555;
+    margin-bottom:15px;
+}
+
+.status{
+    background:#efe8dc;
+    padding:8px 15px;
+    display:inline-block;
+    font-size:12px;
+    letter-spacing:2px;
+}
+
+/* ================= SKILLS ================= */
+
+.skills-section{
+    padding:120px 7%;
+    background:#0b132f;
+    color:#fff;
+}
+
+.skills-heading{
+    margin-bottom:70px;
+}
+
+.skills-heading small{
+    letter-spacing:4px;
+    color:#8f95a5;
+}
+
+.skills-heading h2{
+    font-size:90px;
+    margin:20px 0;
+    font-family:'Bebas Neue',sans-serif;
+}
+
+.skills-heading span{
+    color:#d25a1e;
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+}
+
+.skills-heading p{
+    max-width:800px;
+    line-height:36px;
+    color:#b6bfd8;
+    font-size:20px;
+}
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.skill-card{
+    background:#121c42;
+    padding:40px;
+    border-radius:14px;
+    transition:0.4s ease;
+}
+
+.skill-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 18px 40px rgba(0,0,0,0.25);
+}
+
+.number{
+    font-size:55px;
+    color:#d25a1e;
+    font-family:'Bebas Neue',sans-serif;
+    margin-bottom:20px;
+}
+
+.skill-card h3{
+    font-size:30px;
+    margin-bottom:20px;
+    font-family:'Cormorant Garamond',serif;
+}
+
+.skill-card ul{
+    list-style:none;
+}
+
+.skill-card ul li{
+    margin-bottom:14px;
+    color:#c2cae0;
+}
+
+/* ================= SHOWREEL ================= */
+
+.showreel-section{
+    padding:120px 7%;
+    background:#efe8dc;
+}
+
+.showreel-header{
+    margin-bottom:70px;
+}
+
+.showreel-header small{
+    letter-spacing:4px;
+    color:#666;
+}
+
+.showreel-header h2{
+    font-size:95px;
+    margin-top:20px;
+    font-family:'Bebas Neue',sans-serif;
+}
+
+.showreel-header span{
+    color:#d25a1e;
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+}
+
+.video-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.video-card{
+    background:#fff;
+    overflow:hidden;
+    border-radius:14px;
+    transition:0.4s ease;
+}
+
+.video-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 40px rgba(0,0,0,0.12);
+}
+
+.video-card a{
+    position:relative;
+    display:block;
+}
+
+.youtube-thumb{
+    aspect-ratio:16/9;
+    object-fit:cover;
+}
+
+.play-button{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:75px;
+    height:75px;
+    background:rgba(210,90,30,0.9);
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    font-size:28px;
+}
+
+.video-content{
+    padding:35px;
+}
+
+.video-content small{
+    letter-spacing:3px;
+    color:#d25a1e;
+    font-size:11px;
+}
+
+.video-content h3{
+    font-size:34px;
+    margin:15px 0;
+    font-family:'Cormorant Garamond',serif;
+}
+
+.video-content p{
+    color:#555;
+    line-height:30px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-section{
+    padding:120px 7%;
+    background:#0b132f;
+    color:#fff;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+}
+
+.contact-left h2{
+    font-size:85px;
+    line-height:85px;
+    margin:20px 0 35px;
+    font-family:'Bebas Neue',sans-serif;
+}
+
+.contact-left h2 span{
+    display:block;
+    color:#d25a1e;
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+}
+
+.contact-left p{
+    color:#b7bfd4;
+    font-size:20px;
+    line-height:36px;
+    margin-bottom:50px;
+}
+
+.contact-info{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.contact-box{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    background:#121c42;
+    padding:25px;
+    border-radius:14px;
+}
+
+.contact-icon{
+    width:60px;
+    height:60px;
+    background:#d25a1e;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+}
+
+.contact-right{
+    background:#121c42;
+    padding:45px;
+    border-radius:14px;
+}
+
+.contact-right h3{
+    font-size:40px;
+    margin-bottom:40px;
+    font-family:'Cormorant Garamond',serif;
+}
+
+.input-box{
+    margin-bottom:25px;
+}
+
+.input-box label{
+    display:block;
+    margin-bottom:12px;
+    letter-spacing:2px;
+    font-size:12px;
+    color:#9ea7be;
+}
+
+.input-box input,
+.input-box textarea,
+.input-box select{
+    width:100%;
+    background:#0b132f;
+    border:none;
+    padding:18px;
+    color:#fff;
+    border-radius:8px;
+    outline:none;
+}
+
+.input-box textarea{
+    height:150px;
+    resize:none;
+}
+
+.send-btn{
+    background:#d25a1e;
+    color:#fff;
+    padding:18px 40px;
+    border-radius:8px;
+    letter-spacing:2px;
+    transition:0.35s ease;
+}
+
+.send-btn:hover{
+    background:#fff;
+    color:#111;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#050914;
+    color:#fff;
+    padding:40px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.footer-logo{
+    font-size:28px;
+    font-family:'Bebas Neue',sans-serif;
+}
+
+.footer-center{
+    color:#9ea7be;
+}
+
+.footer-menu{
+    display:flex;
+    gap:25px;
+}
+
+.footer-menu a{
+    color:#9ea7be;
+    transition:0.3s;
+}
+
+.footer-menu a:hover{
+    color:#d25a1e;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1100px){
+
+    .hero-left h1{
+        font-size:90px;
+        line-height:88px;
+    }
+
+    .hero-script{
+        font-size:75px;
+    }
+
+    .hero-right h2{
+        font-size:46px;
+        line-height:60px;
+    }
+
+}
+
+@media(max-width:900px){
+
+    nav{
+        flex-direction:column;
+        height:auto;
+        padding:20px;
+        gap:18px;
+    }
+
+    .menu{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero{
+        flex-direction:column;
+    }
+
+    .story-section,
+    .contact-section{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .hero-left h1{
+        font-size:58px;
+        line-height:58px;
+    }
+
+    .hero-script{
+        font-size:48px;
+    }
+
+    .hero-right h2{
+        font-size:34px;
+        line-height:46px;
+    }
+
+    .story-left h2,
+    .skills-heading h2,
+    .showreel-header h2,
+    .contact-left h2{
+        font-size:42px;
+        line-height:46px;
+    }
+
+    .video-grid,
+    .skills-grid{
+        grid-template-columns:1fr;
+    }
+
+    footer{
+        flex-direction:column;
+        text-align:center;
+    }
+
+}
