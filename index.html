@@ -38,12 +38,9 @@
         <a href="#contact">CONTACT</a>
     </div>
 
-    <a href="https://wa.me/919505112007"
-       target="_blank"
-       class="hire-btn">
-
+    <a href="mailto:gunturuvidyasagar77@gmail.com"
+    class="hire-btn">
         HIRE ME →
-
     </a>
 
 </nav>
@@ -508,20 +505,7 @@
             Send a Message
         </h3>
 
-        <form action="https://formsubmit.co/gunturuvidyasagar77@gmail.com"
-              method="POST">
-
-            <input type="hidden"
-                   name="_captcha"
-                   value="false">
-
-            <input type="hidden"
-                   name="_subject"
-                   value="New Portfolio Message">
-
-            <input type="hidden"
-                   name="_next"
-                   value="https://vsg732.github.io/vidyasagar-portfolio/">
+        <form id="contact-form">
 
             <div class="input-box">
 
@@ -529,7 +513,7 @@
 
                 <input
                     type="text"
-                    name="name"
+                    id="name"
                     placeholder="Full name"
                     required>
 
@@ -541,7 +525,7 @@
 
                 <input
                     type="email"
-                    name="email"
+                    id="email"
                     placeholder="you@example.com"
                     required>
 
@@ -552,7 +536,7 @@
                 <label>Message</label>
 
                 <textarea
-                    name="message"
+                    id="message"
                     placeholder="Tell me about your project..."
                     required></textarea>
 
@@ -602,6 +586,39 @@
     </div>
 
 </footer>
+
+<div class="demo-badge">
+    DEMO PORTFOLIO
+</div>
+
+<!-- ================= EMAIL SCRIPT ================= -->
+
+<script>
+
+document.getElementById("contact-form").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+
+    let subject = "Portfolio Inquiry from " + name;
+
+    let body =
+`Name: ${name}
+
+Email: ${email}
+
+Message:
+${message}`;
+
+    window.location.href =
+`mailto:gunturuvidyasagar77@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+});
+
+</script>
 
 </body>
 </html>
