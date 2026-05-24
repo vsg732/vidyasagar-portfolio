@@ -510,9 +510,8 @@
             Send a Message
         </h3>
 
-        <form action="mailto:gunturuvidyasagar77@gmail.com"
-              method="post"
-              enctype="text/plain">
+        <form action="https://formsubmit.co/gunturuvidyasagar77@gmail.com"
+              method="POST">
 
             <div class="input-box">
 
@@ -521,7 +520,8 @@
                 <input
                     type="text"
                     name="name"
-                    placeholder="Full name">
+                    placeholder="Full name"
+                    required>
 
             </div>
 
@@ -532,7 +532,23 @@
                 <input
                     type="email"
                     name="email"
-                    placeholder="you@example.com">
+                    placeholder="you@example.com"
+                    required>
+
+            </div>
+
+            <div class="input-box">
+
+                <label>Project Type</label>
+
+                <select name="project">
+
+                    <option>Portfolio Website</option>
+                    <option>Web Design</option>
+                    <option>Frontend Development</option>
+                    <option>Creative Showcase</option>
+
+                </select>
 
             </div>
 
@@ -542,9 +558,20 @@
 
                 <textarea
                     name="message"
-                    placeholder="Tell me about your project..."></textarea>
+                    placeholder="Tell me about your project..."
+                    required></textarea>
 
             </div>
+
+            <!-- FORM SETTINGS -->
+
+            <input type="hidden"
+                   name="_captcha"
+                   value="false">
+
+            <input type="hidden"
+                   name="_next"
+                   value="https://vsg732.github.io/vidyasagar-portfolio/">
 
             <button class="send-btn">
 
@@ -563,7 +590,6 @@
     </div>
 
 </section>
-
 <!-- ================= FOOTER ================= -->
 
 <footer>
